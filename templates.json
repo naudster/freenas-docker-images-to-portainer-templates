@@ -1,9 +1,10 @@
 [
   {
     "title": "smokeping",
+    "description": "smokeping",
     "image": "linuxserver/smokeping:latest",
     "ports": [
-      "8080:8080/tcp"
+      "8080/tcp"
     ],
     "volumes": [
       "/config",
@@ -27,15 +28,16 @@
   },
   {
     "title": "graphite-statsd",
+    "description": "graphite-statsd",
     "image": "hopsoft/graphite-statsd:latest",
     "ports": [
-      "80:5080/tcp",
-      "2003:2003/tcp",
-      "2004:2004/tcp",
-      "2023:2023/tcp",
-      "2024:2024/tcp",
-      "8125:8125/tcp",
-      "8126:8126/tcp"
+      "5080/tcp",
+      "2003/tcp",
+      "2004/tcp",
+      "2023/tcp",
+      "2024/tcp",
+      "8125/tcp",
+      "8126/tcp"
     ],
     "volumes": [
       "/opt/graphite/conf",
@@ -63,10 +65,11 @@
   },
   {
     "title": "sabnzbd",
+    "description": "sabnzbd",
     "image": "linuxserver/sabnzbd:latest",
     "ports": [
-      "8080:8080/tcp",
-      "9090:9090/tcp"
+      "8080/tcp",
+      "9090/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/sabnzbd-banner.png",
     "volumes": [
@@ -94,9 +97,10 @@
   },
   {
     "title": "xdm",
+    "description": "xdm",
     "image": "talenddev/xdm:latest",
     "ports": [
-      "8085:8085/tcp"
+      "8085/tcp"
     ],
     "volumes": [
       "/data",
@@ -109,10 +113,11 @@
   },
   {
     "title": "letsencrypt",
+    "description": "letsencrypt",
     "image": "linuxserver/letsencrypt:latest",
     "ports": [
-      "80:8080/tcp",
-      "443:4343/tcp"
+      "8080/tcp",
+      "4343/tcp"
     ],
     "volumes": [
       "/config"
@@ -155,11 +160,12 @@
   },
   {
     "title": "influxdb",
+    "description": "influxdb",
     "image": "influxdb:latest",
     "ports": [
-      "8083:8083/tcp",
-      "8086:8086/tcp",
-      "2003:2003/tcp"
+      "8083/tcp",
+      "8086/tcp",
+      "2003/tcp"
     ],
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Influxdb_logo.svg/1200px-Influxdb_logo.svg.png",
     "volumes": [
@@ -200,9 +206,10 @@
   },
   {
     "title": "grafana",
+    "description": "grafana",
     "image": "grafana/grafana:latest",
     "ports": [
-      "3000:3000/tcp"
+      "3000/tcp"
     ],
     "volumes": [
       "/var/lib/grafana",
@@ -226,9 +233,10 @@
   },
   {
     "title": "owncloud",
+    "description": "owncloud",
     "image": "library/owncloud:latest",
     "ports": [
-      "80:8080/tcp"
+      "8080/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/docker-library/docs/9d36b4ed7cabc35dbd3849272ba2bd7abe482172/owncloud/logo.png",
     "volumes": [
@@ -239,10 +247,9 @@
   },
   {
     "title": "docker-clean",
+    "description": "docker-clean",
     "image": "zzrot/docker-clean:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [
       "/var/run/docker.sock"
     ],
@@ -251,9 +258,10 @@
   },
   {
     "title": "htpcmanager",
+    "description": "htpcmanager",
     "image": "linuxserver/htpcmanager:latest",
     "ports": [
-      "8085:8085/tcp"
+      "8085/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/htpcmanager-icon.png",
     "volumes": [
@@ -269,12 +277,13 @@
   },
   {
     "title": "emby",
+    "description": "emby",
     "image": "emby/embyserver:latest",
     "ports": [
-      "8096:8096/tcp",
-      "8920:8920/tcp",
-      "7359:7359/udp",
-      "1900:1900/udp"
+      "8096/tcp",
+      "8920/tcp",
+      "7359/udp",
+      "1900/udp"
     ],
     "volumes": [
       "/config",
@@ -307,10 +316,11 @@
   },
   {
     "title": "wordpress",
+    "description": "wordpress",
     "image": "library/wordpress:4-php7.1-apache",
     "ports": [
-      "80:8888/tcp",
-      "443:4433/tcp"
+      "8888/tcp",
+      "4433/tcp"
     ],
     "volumes": [],
     "env": [
@@ -339,20 +349,20 @@
   },
   {
     "title": "ubuntu",
+    "description": "ubuntu",
     "image": "ubuntu:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>Ubuntu Linux</h1>\n<p>This is a simple Ubuntu Linux container. It is an Interactive container, meaning\nthat the Console UI / CLI will talk directly to the command specified (and\ncan be connected / disconnected repeatedly without killing the container).\nThe command argument also MUST be specified - this is generally /bin/sh or\nsome other useful command in the container.</p>"
   },
   {
     "title": "sonarr",
+    "description": "sonarr",
     "image": "linuxserver/sonarr:latest",
     "ports": [
-      "8989:8989/tcp",
-      "9898:9898/tcp"
+      "8989/tcp",
+      "9898/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/sonarr-banner.png",
     "volumes": [
@@ -378,9 +388,10 @@
   },
   {
     "title": "huginn",
+    "description": "huginn",
     "image": "cantino/huginn",
     "ports": [
-      "3000:3000/tcp"
+      "3000/tcp"
     ],
     "logo": "https://raw.github.com/cantino/huginn/master/media/huginn-logo.png",
     "volumes": [
@@ -391,10 +402,9 @@
   },
   {
     "title": "jdownloader",
+    "description": "jdownloader",
     "image": "dbarton/jdownloader",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [
       "/jdownloader/cfg",
       "/jdownloader/Downloads"
@@ -413,9 +423,10 @@
   },
   {
     "title": "mariadb",
+    "description": "mariadb",
     "image": "mariadb:latest",
     "ports": [
-      "3306:3306/tcp"
+      "3306/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/docker-library/docs/74e3b3d4d60389208732dbd2c95145868111d959/mariadb/logo.png",
     "volumes": [
@@ -447,10 +458,11 @@
   },
   {
     "title": "monero",
+    "description": "monero",
     "image": "kannix/monero-full-node:latest",
     "ports": [
-      "18080:18080/tcp",
-      "18081:18081/tcp"
+      "18080/tcp",
+      "18081/tcp"
     ],
     "volumes": [
       "/root/.bitmonero"
@@ -460,9 +472,10 @@
   },
   {
     "title": "organizr",
+    "description": "organizr",
     "image": "lsiocommunity/organizr:latest",
     "ports": [
-      "80:80/tcp"
+      "80/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/organizr-icon.png",
     "volumes": [
@@ -486,9 +499,10 @@
   },
   {
     "title": "plexpy",
+    "description": "plexpy",
     "image": "linuxserver/plexpy:latest",
     "ports": [
-      "8181:8181/tcp"
+      "8181/tcp"
     ],
     "volumes": [
       "/config",
@@ -512,9 +526,10 @@
   },
   {
     "title": "cadvisor",
+    "description": "cadvisor",
     "image": "google/cadvisor:latest",
     "ports": [
-      "8080:8080/tcp"
+      "8080/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/google/cadvisor/master/logo.png",
     "volumes": [
@@ -541,9 +556,10 @@
   },
   {
     "title": "phpmyadmin",
+    "description": "phpmyadmin",
     "image": "phpmyadmin/phpmyadmin:4.6.6-2",
     "ports": [
-      "80:8080/tcp"
+      "8080/tcp"
     ],
     "volumes": [],
     "env": [
@@ -572,9 +588,10 @@
   },
   {
     "title": "jackett",
+    "description": "jackett",
     "image": "linuxserver/jackett:latest",
     "ports": [
-      "9117:9117/tcp"
+      "9117/tcp"
     ],
     "volumes": [
       "/config",
@@ -598,9 +615,10 @@
   },
   {
     "title": "maraschino",
+    "description": "maraschino",
     "image": "smdion/docker-maraschino:latest",
     "ports": [
-      "7000:7000/tcp"
+      "7000/tcp"
     ],
     "volumes": [
       "/config"
@@ -610,10 +628,11 @@
   },
   {
     "title": "mineos",
+    "description": "mineos",
     "image": "yujiod/minecraft-mineos:latest",
     "ports": [
-      "8443:8443/tcp",
-      "25565:25565/tcp"
+      "8443/tcp",
+      "25565/tcp"
     ],
     "volumes": [],
     "env": [
@@ -626,10 +645,11 @@
   },
   {
     "title": "nginx-devel",
+    "description": "nginx-devel",
     "image": "nginx:mainline",
     "ports": [
-      "80:8080/tcp",
-      "443:8081/tcp"
+      "8080/tcp",
+      "8081/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/nginx/logo.png",
     "volumes": [
@@ -642,9 +662,10 @@
   },
   {
     "title": "kodi-server",
+    "description": "kodi-server",
     "image": "celedhrim/kodi-server:latest",
     "ports": [
-      "8089:8089/tcp"
+      "8089/tcp"
     ],
     "volumes": [
       "/opt/kodi-server/share/kodi/portable_data"
@@ -654,10 +675,11 @@
   },
   {
     "title": "seafile",
+    "description": "seafile",
     "image": "sunx/seafile:latest",
     "ports": [
-      "8000:8000/tcp",
-      "8082:8082/tcp"
+      "8000/tcp",
+      "8082/tcp"
     ],
     "volumes": [
       "/home/seafile"
@@ -676,10 +698,11 @@
   },
   {
     "title": "homebridge",
+    "description": "homebridge",
     "image": "marcoraddatz/homebridge",
     "ports": [
-      "5353:5353/udp",
-      "51826:51826/tcp"
+      "5353/udp",
+      "51826/tcp"
     ],
     "volumes": [
       "/root/.homebridge"
@@ -689,9 +712,10 @@
   },
   {
     "title": "libresonic",
+    "description": "libresonic",
     "image": "binhex/arch-libresonic:6.1.0-02",
     "ports": [
-      "4040:4040/tcp"
+      "4040/tcp"
     ],
     "volumes": [
       "/config",
@@ -711,9 +735,10 @@
   },
   {
     "title": "searx",
+    "description": "searx",
     "image": "wonderfall/searx:latest",
     "ports": [
-      "8888:8901/tcp"
+      "8901/tcp"
     ],
     "volumes": [],
     "env": [
@@ -730,10 +755,9 @@
   },
   {
     "title": "dropbox",
+    "description": "dropbox",
     "image": "janeczku/dropbox:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [
       "/dbox/.dropbox",
       "/dbox/Dropbox"
@@ -752,9 +776,10 @@
   },
   {
     "title": "mylar",
+    "description": "mylar",
     "image": "linuxserver/mylar:latest",
     "ports": [
-      "8090:8090/tcp"
+      "8090/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/mylar-icon.png",
     "volumes": [
@@ -772,9 +797,10 @@
   },
   {
     "title": "checkmk-agent",
+    "description": "checkmk-agent",
     "image": "xforty/checkmk",
     "ports": [
-      "6556:6556/tcp"
+      "6556/tcp"
     ],
     "volumes": [
       "/var/run/docker.sock"
@@ -789,10 +815,11 @@
   },
   {
     "title": "resilio-sync",
+    "description": "resilio-sync",
     "image": "linuxserver/resilio-sync",
     "ports": [
-      "8888:8888/tcp",
-      "55555:55555/tcp"
+      "8888/tcp",
+      "55555/tcp"
     ],
     "volumes": [
       "/config",
@@ -812,22 +839,22 @@
   },
   {
     "title": "alpine",
+    "description": "alpine",
     "image": "alpine:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>Alpine Linux</h1>\n<p>This is a simple Alpine Linux container. It is an Interactive container, meaning\nthat the Console UI / CLI will talk directly to the command specified (and\ncan be connected / disconnected repeatedly without killing the container).\nThe command argument also MUST be specified - this is generally /bin/sh or\nsome other useful command in the container.</p>"
   },
   {
     "title": "teamspeak",
+    "description": "teamspeak",
     "image": "linuxserver/gsm-ts3:latest",
     "ports": [
-      "9987:9987/udp",
-      "30033:30033/tcp",
-      "10011:10011/tcp",
-      "41144:41144/tcp"
+      "9987/udp",
+      "30033/tcp",
+      "10011/tcp",
+      "41144/tcp"
     ],
     "logo": "http://teamspeak.com/assets/images/logos/teamspeak.png",
     "volumes": [
@@ -847,9 +874,10 @@
   },
   {
     "title": "mysql",
+    "description": "mysql",
     "image": "mysql:latest",
     "ports": [
-      "3306:3306/tcp"
+      "3306/tcp"
     ],
     "volumes": [
       "/var/lib/mysql"
@@ -880,10 +908,9 @@
   },
   {
     "title": "s3cmd",
+    "description": "s3cmd",
     "image": "garland/docker-s3cmd:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [
       "/opt/src"
     ],
@@ -905,37 +932,36 @@
   },
   {
     "title": "omd",
+    "description": "omd",
     "image": "debian:8",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>omd-labs-docker</h1>\n<p>OMD Labs Nightly (https://labs.consol.de/de/omd/index.html) on Docker with Ansible support.</p>\n<p>Author: Simon Meggle, <em>simon.meggle at consol.de</em></p>\n<p>Built on Debian 8 with custom site named \"cmk\".</p>\n<h3>Use data containers</h3>\n<h4>Host mounted data folders</h4>\n<p>As soon as the container dies, all monitoring data (configuration files, RRD data, InfluxDB, log files etc.) are lost, too. To keep the data persistent, use host mounted volumes.</p>\n<p>Mount host directories for:</p>\n<ul>\n<li>/opt/omd/sites/cmk/local</li>\n<li>/opt/omd/sites/cmk/etc</li>\n<li>/opt/omd/sites/cmk/var</li>\n</ul>\n<p>Default user: omdadmin</p>\n<p>Default password: omd</p>\n<p>https:(ip-address)/cmk/</p>"
   },
   {
     "title": "baseimage",
+    "description": "baseimage",
     "image": "phusion/baseimage:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>Baseimage Linux</h1>\n<p>This is a simple Linux \"baseimage\" container. It is an Interactive container, meaning\nthat the Console UI / CLI will talk directly to the command specified (and\ncan be connected / disconnected repeatedly without killing the container).\nThe command argument also MUST be specified - this is generally /bin/sh or\nsome other useful command in the container.  The baseimage container is also\nspecifically designed for Docker and is intended as a base image for other\ncontainers to inherit from.</p>"
   },
   {
     "title": "plexpass",
+    "description": "plexpass",
     "image": "plexinc/pms-docker:plexpass",
     "ports": [
-      "32400:32400/tcp",
-      "3005:3005/tcp",
-      "8324:8324/tcp",
-      "32469:32469/tcp",
-      "1900:1900/udp",
-      "32410:32410/udp",
-      "32412:32412/udp",
-      "32413:32413/udp",
-      "32414:32414/udp"
+      "32400/tcp",
+      "3005/tcp",
+      "8324/tcp",
+      "32469/tcp",
+      "1900/udp",
+      "32410/udp",
+      "32412/udp",
+      "32413/udp",
+      "32414/udp"
     ],
     "logo": "http://the-gadgeteer.com/wp-content/uploads/2015/10/plex-logo-e1446990678679.png",
     "volumes": [
@@ -973,9 +999,10 @@
   },
   {
     "title": "subsonic",
+    "description": "subsonic",
     "image": "hurricane/subsonic",
     "ports": [
-      "4040:4040/tcp"
+      "4040/tcp"
     ],
     "logo": "http://www.activeobjects.no/subsonic/forum/templates/subSilver/images/logo_phpBB.gif",
     "volumes": [
@@ -1015,9 +1042,10 @@
   },
   {
     "title": "loggly",
+    "description": "loggly",
     "image": "sendgridlabs/loggly-docker:latest",
     "ports": [
-      "514:514/udp"
+      "514/udp"
     ],
     "volumes": [],
     "env": [
@@ -1038,12 +1066,13 @@
   },
   {
     "title": "urbackup",
+    "description": "urbackup",
     "image": "axemann/urb-docker:latest",
     "ports": [
-      "35623:35623/udp",
-      "55413:55413/tcp",
-      "55414:55414/tcp",
-      "55415:55415/tcp"
+      "35623/udp",
+      "55413/tcp",
+      "55414/tcp",
+      "55415/tcp"
     ],
     "volumes": [
       "/var/urbackup",
@@ -1055,9 +1084,10 @@
   },
   {
     "title": "wallabag",
+    "description": "wallabag",
     "image": "wallabag/wallabag:latest",
     "ports": [
-      "80:80/tcp"
+      "80/tcp"
     ],
     "volumes": [
       "/var/www/wallabag/data"
@@ -1116,19 +1146,19 @@
   },
   {
     "title": "gentoo",
+    "description": "gentoo",
     "image": "vguardiola/gentoo:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>Gentoo Linux</h1>\n<p>This is a simple Gentoo Linux container. It is an Interactive container, meaning\nthat the Console UI / CLI will talk directly to the command specified (and\ncan be connected / disconnected repeatedly without killing the container).\nThe command argument also MUST be specified - this is generally /bin/sh or\nsome other useful command in the container.</p>"
   },
   {
     "title": "musicbrainz",
+    "description": "musicbrainz",
     "image": "linuxserver/musicbrainz:latest",
     "ports": [
-      "5000:5000/tcp"
+      "5000/tcp"
     ],
     "volumes": [
       "/config",
@@ -1160,9 +1190,10 @@
   },
   {
     "title": "openhab",
+    "description": "openhab",
     "image": "openhab/openhab:2.0.0-amd64",
     "ports": [
-      "8080:8080/tcp"
+      "8080/tcp"
     ],
     "volumes": [
       "/openhab/conf",
@@ -1174,10 +1205,9 @@
   },
   {
     "title": "watchtower",
+    "description": "watchtower",
     "image": "centurylink/watchtower",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [
       "/var/run/docker.sock"
     ],
@@ -1186,11 +1216,12 @@
   },
   {
     "title": "neo4j",
+    "description": "neo4j",
     "image": "neo4j:latest",
     "ports": [
-      "7474:7474/tcp",
-      "7473:7473/tcp",
-      "7687:7687/tcp"
+      "7474/tcp",
+      "7473/tcp",
+      "7687/tcp"
     ],
     "volumes": [
       "/data"
@@ -1200,10 +1231,11 @@
   },
   {
     "title": "nginx-proxy",
+    "description": "nginx-proxy",
     "image": "jwilder/nginx-proxy:latest",
     "ports": [
-      "80:80/tcp",
-      "443:443/tcp"
+      "80/tcp",
+      "443/tcp"
     ],
     "volumes": [
       "/etc/nginx/certs"
@@ -1218,17 +1250,18 @@
   },
   {
     "title": "plex",
+    "description": "plex",
     "image": "plexinc/pms-docker:latest",
     "ports": [
-      "32400:32400/tcp",
-      "3005:3005/tcp",
-      "8324:8324/tcp",
-      "32469:32469/tcp",
-      "1900:1900/udp",
-      "32410:32410/udp",
-      "32412:32412/udp",
-      "32413:32413/udp",
-      "32414:32414/udp"
+      "32400/tcp",
+      "3005/tcp",
+      "8324/tcp",
+      "32469/tcp",
+      "1900/udp",
+      "32410/udp",
+      "32412/udp",
+      "32413/udp",
+      "32414/udp"
     ],
     "logo": "http://the-gadgeteer.com/wp-content/uploads/2015/10/plex-logo-e1446990678679.png",
     "volumes": [
@@ -1266,11 +1299,12 @@
   },
   {
     "title": "transmission",
+    "description": "transmission",
     "image": "linuxserver/transmission:latest",
     "ports": [
-      "9091:9091/tcp",
-      "51413:51413/tcp",
-      "51413:51413/udp"
+      "9091/tcp",
+      "51413/tcp",
+      "51413/udp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/transmission.png",
     "volumes": [
@@ -1296,9 +1330,10 @@
   },
   {
     "title": "MongoDB",
+    "description": "MongoDB",
     "image": "bitnami/mongodb:latest",
     "ports": [
-      "27017:27017/tcp"
+      "27017/tcp"
     ],
     "volumes": [
       "/bitnami/mongodb"
@@ -1325,9 +1360,10 @@
   },
   {
     "title": "pyload",
+    "description": "pyload",
     "image": "cobraeti/docker-pyload",
     "ports": [
-      "8000:8000/tcp"
+      "8000/tcp"
     ],
     "volumes": [
       "/pyload/config",
@@ -1347,10 +1383,11 @@
   },
   {
     "title": "lazylibrarian",
+    "description": "lazylibrarian",
     "image": "linuxserver/lazylibrarian",
     "ports": [
-      "5299:5299/tcp",
-      "8181:8181/tcp"
+      "5299/tcp",
+      "8181/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/lazylibrarian-icon.png",
     "volumes": [
@@ -1376,9 +1413,10 @@
   },
   {
     "title": "nzbhydra",
+    "description": "nzbhydra",
     "image": "linuxserver/hydra:latest",
     "ports": [
-      "5075:5075/tcp"
+      "5075/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/hydra-icon.png",
     "volumes": [
@@ -1403,11 +1441,12 @@
   },
   {
     "title": "pi-hole",
+    "description": "pi-hole",
     "image": "diginc/pi-hole:alpine",
     "ports": [
-      "53:53/tcp",
-      "53:53/udp",
-      "80:80/tcp"
+      "53/tcp",
+      "53/udp",
+      "80/tcp"
     ],
     "volumes": [
       "/etc/pihole/"
@@ -1442,19 +1481,19 @@
   },
   {
     "title": "emacs",
+    "description": "emacs",
     "image": "silex/emacs",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>GNU Emacs screen editor</h1>\n<p>This is the popular editor, running as an Interactive container.  When the editor process exits, the container will stop.</p>"
   },
   {
     "title": "sickrage",
+    "description": "sickrage",
     "image": "linuxserver/sickrage:latest",
     "ports": [
-      "8081:8081/tcp"
+      "8081/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/sickrage-banner.png",
     "volumes": [
@@ -1480,9 +1519,10 @@
   },
   {
     "title": "transmission-openvpn",
+    "description": "transmission-openvpn",
     "image": "haugene/transmission-openvpn:latest",
     "ports": [
-      "9091:9091/tcp"
+      "9091/tcp"
     ],
     "volumes": [
       "/config",
@@ -1524,9 +1564,10 @@
   },
   {
     "title": "wekan",
+    "description": "wekan",
     "image": "wekanteam/wekan:meteor-1.4",
     "ports": [
-      "8280:80/tcp"
+      "80/tcp"
     ],
     "volumes": [],
     "env": [
@@ -1543,9 +1584,10 @@
   },
   {
     "title": "collabora",
+    "description": "collabora",
     "image": "collabora/code:latest",
     "ports": [
-      "9980:9980/tcp"
+      "9980/tcp"
     ],
     "volumes": [],
     "env": [
@@ -1566,9 +1608,10 @@
   },
   {
     "title": "lychee",
+    "description": "lychee",
     "image": "linuxserver/lychee:latest",
     "ports": [
-      "80:80/tcp"
+      "80/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/lychee-icon.png",
     "volumes": [
@@ -1593,9 +1636,10 @@
   },
   {
     "title": "radarr",
+    "description": "radarr",
     "image": "linuxserver/radarr:latest",
     "ports": [
-      "7878:7878/tcp"
+      "7878/tcp"
     ],
     "volumes": [
       "/config",
@@ -1620,9 +1664,10 @@
   },
   {
     "title": "beets",
+    "description": "beets",
     "image": "linuxserver/beets:latest",
     "ports": [
-      "8337:8337/tcp"
+      "8337/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/beets-icon.png",
     "volumes": [
@@ -1644,15 +1689,16 @@
   },
   {
     "title": "unifi",
+    "description": "unifi",
     "image": "goofball222/unifi:latest",
     "ports": [
-      "3478:3478/udp",
-      "6789:6789/tcp",
-      "8080:8080/tcp",
-      "8443:8443/tcp",
-      "8843:8843/tcp",
-      "8880:8880/tcp",
-      "10001:10001/udp"
+      "3478/udp",
+      "6789/tcp",
+      "8080/tcp",
+      "8443/tcp",
+      "8843/tcp",
+      "8880/tcp",
+      "10001/udp"
     ],
     "volumes": [
       "/usr/lib/unifi/data",
@@ -1668,30 +1714,27 @@
   },
   {
     "title": "archlinux",
+    "description": "archlinux",
     "image": "base/archlinux:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>Arch Linux</h1>\n<p>This is a simple Arch Linux container.  It is an Interactive container, meaning\nthat the Console UI / CLI will talk directly to the command specified (and\ncan be connected / disconnected repeatedly without killing the container).\nThe command argument also MUST be specified - this is generally /bin/sh or\nsome other useful command in the container.</p>"
   },
   {
     "title": "centos",
+    "description": "centos",
     "image": "centos:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>Centos Linux</h1>\n<p>This is a simple CentOS Linux container. It is an Interactive container, meaning\nthat the Console UI / CLI will talk directly to the command specified (and\ncan be connected / disconnected repeatedly without killing the container).\nThe command argument also MUST be specified - this is generally /bin/sh or\nsome other useful command in the container.</p>"
   },
   {
     "title": "clonedeploy",
+    "description": "clonedeploy",
     "image": "clonedeploy/clonedeploy:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "logo": "https://clonedeploy.org/wp-content/uploads/2016/05/wds.png",
     "volumes": [
       "/var/www/html",
@@ -1717,10 +1760,11 @@
   },
   {
     "title": "nginx",
+    "description": "nginx",
     "image": "nginx:stable",
     "ports": [
-      "80:8080/tcp",
-      "443:8081/tcp"
+      "8080/tcp",
+      "8081/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/nginx/logo.png",
     "volumes": [
@@ -1733,9 +1777,10 @@
   },
   {
     "title": "headphones",
+    "description": "headphones",
     "image": "linuxserver/headphones:latest",
     "ports": [
-      "8181:8181/tcp"
+      "8181/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/headphones-banner.png",
     "volumes": [
@@ -1754,9 +1799,10 @@
   },
   {
     "title": "nagios",
+    "description": "nagios",
     "image": "jasonrivers/nagios:latest",
     "ports": [
-      "80:6580/tcp"
+      "6580/tcp"
     ],
     "volumes": [
       "/opt/nagios/etc",
@@ -1780,9 +1826,10 @@
   },
   {
     "title": "redis",
+    "description": "redis",
     "image": "redis:latest",
     "ports": [
-      "6379:6379/tcp"
+      "6379/tcp"
     ],
     "volumes": [],
     "env": [],
@@ -1790,10 +1837,9 @@
   },
   {
     "title": "duckdns",
+    "description": "duckdns",
     "image": "linuxserver/duckdns:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [
       {
@@ -1821,9 +1867,10 @@
   },
   {
     "title": "nzbget",
+    "description": "nzbget",
     "image": "linuxserver/nzbget:latest",
     "ports": [
-      "6789:6789/tcp"
+      "6789/tcp"
     ],
     "logo": "http://i.imgur.com/A4VMbwE.png",
     "volumes": [
@@ -1848,9 +1895,10 @@
   },
   {
     "title": "ghost",
+    "description": "ghost",
     "image": "ghost:latest",
     "ports": [
-      "2368:2368/tcp"
+      "2368/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/docker-library/docs/c5b6d94dc8f0557925ab37ca43141c0efc5cc363/ghost/logo.png",
     "volumes": [
@@ -1861,9 +1909,10 @@
   },
   {
     "title": "znc",
+    "description": "znc",
     "image": "linuxserver/znc:latest",
     "ports": [
-      "6501:6501/tcp"
+      "6501/tcp"
     ],
     "volumes": [
       "/config"
@@ -1886,9 +1935,10 @@
   },
   {
     "title": "sickbeard",
+    "description": "sickbeard",
     "image": "timhaak/sickbeard:latest",
     "ports": [
-      "8081:8081/tcp"
+      "8081/tcp"
     ],
     "volumes": [
       "/config",
@@ -1899,11 +1949,12 @@
   },
   {
     "title": "syncthing",
+    "description": "syncthing",
     "image": "linuxserver/syncthing:latest",
     "ports": [
-      "8384:8384/tcp",
-      "22000:22000/tcp",
-      "21027:21027/udp"
+      "8384/tcp",
+      "22000/tcp",
+      "21027/udp"
     ],
     "volumes": [
       "/config",
@@ -1923,9 +1974,10 @@
   },
   {
     "title": "ombi",
+    "description": "ombi",
     "image": "linuxserver/ombi:latest",
     "ports": [
-      "3579:3579/tcp"
+      "3579/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png",
     "volumes": [
@@ -1949,10 +2001,11 @@
   },
   {
     "title": "gogs",
+    "description": "gogs",
     "image": "gogs/gogs:latest",
     "ports": [
-      "3000:10080/tcp",
-      "22:10020/tcp"
+      "10080/tcp",
+      "10020/tcp"
     ],
     "logo": "https://github.com/gogits/gogs/blob/master/public/img/gogs-large-resize.png",
     "volumes": [
@@ -1963,9 +2016,10 @@
   },
   {
     "title": "nextcloud",
+    "description": "nextcloud",
     "image": "nextcloud:latest",
     "ports": [
-      "80:9000/tcp"
+      "9000/tcp"
     ],
     "logo": "https://github.com/nextcloud/docker/raw/master/logo.png",
     "volumes": [
@@ -1976,9 +2030,10 @@
   },
   {
     "title": "homeassistant",
+    "description": "homeassistant",
     "image": "homeassistant/home-assistant:latest",
     "ports": [
-      "8123:8123/tcp"
+      "8123/tcp"
     ],
     "volumes": [
       "/config"
@@ -1993,12 +2048,13 @@
   },
   {
     "title": "deluge",
+    "description": "deluge",
     "image": "linuxserver/deluge:latest",
     "ports": [
-      "8112:8112/tcp",
-      "58846:58846/tcp",
-      "58946:58946/tcp",
-      "58946:58946/udp"
+      "8112/tcp",
+      "58846/tcp",
+      "58946/tcp",
+      "58946/udp"
     ],
     "volumes": [
       "/config",
@@ -2026,10 +2082,11 @@
   },
   {
     "title": "mosquitto",
+    "description": "mosquitto",
     "image": "eclipse-mosquitto:latest",
     "ports": [
-      "1883:1883/tcp",
-      "9001:9001/tcp"
+      "1883/tcp",
+      "9001/tcp"
     ],
     "volumes": [
       "/mosquitto/config",
@@ -2041,12 +2098,13 @@
   },
   {
     "title": "bacula",
+    "description": "bacula",
     "image": "itherz/bacula:latest",
     "ports": [
-      "9101:9101/udp",
-      "9103:9103/udp",
-      "9101:9101/tcp",
-      "9103:9103/tcp"
+      "9101/udp",
+      "9103/udp",
+      "9101/tcp",
+      "9103/tcp"
     ],
     "volumes": [
       "/etc/bacula",
@@ -2057,12 +2115,13 @@
   },
   {
     "title": "emby-beta",
+    "description": "emby-beta",
     "image": "emby/embyserver:beta",
     "ports": [
-      "8096:8096/tcp",
-      "8920:8920/tcp",
-      "7359:7359/udp",
-      "1900:1900/udp"
+      "8096/tcp",
+      "8920/tcp",
+      "7359/udp",
+      "1900/udp"
     ],
     "volumes": [
       "/config",
@@ -2095,9 +2154,10 @@
   },
   {
     "title": "openproject",
+    "description": "openproject",
     "image": "openproject/community:latest",
     "ports": [
-      "8080:8080/tcp"
+      "8080/tcp"
     ],
     "volumes": [
       "/var/lib/postgresql/9.4/main",
@@ -2114,19 +2174,19 @@
   },
   {
     "title": "busybox",
+    "description": "busybox",
     "image": "busybox:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>Busybox Linux</h1>\n<p>This is a simple Busybox Linux container. It is an Interactive container, meaning\nthat the Console UI / CLI will talk directly to the command specified (and\ncan be connected / disconnected repeatedly without killing the container).\nThe command argument also MUST be specified - this is generally /bin/sh or\nsome other useful command in the container.  Busybox is known for being a\nparticularly small and minimalist container, containing a lot of functionality\nin a small amount of space.</p>"
   },
   {
     "title": "postgres",
+    "description": "postgres",
     "image": "postgres:latest",
     "ports": [
-      "5432:5432/tcp"
+      "5432/tcp"
     ],
     "logo": "https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/postgres/logo.png",
     "volumes": [],
@@ -2156,11 +2216,12 @@
   },
   {
     "title": "elk",
+    "description": "elk",
     "image": "sebp/elk:latest",
     "ports": [
-      "5601:5601/tcp",
-      "9200:9200/tcp",
-      "5044:5044/tcp"
+      "5601/tcp",
+      "9200/tcp",
+      "5044/tcp"
     ],
     "volumes": [
       "/var/lib/elasticsearch",
@@ -2212,10 +2273,11 @@
   },
   {
     "title": "madsonic",
+    "description": "madsonic",
     "image": "binhex/arch-madsonic:latest",
     "ports": [
-      "4040:4040/tcp",
-      "4050:4050/tcp"
+      "4040/tcp",
+      "4050/tcp"
     ],
     "volumes": [
       "/config",
@@ -2239,9 +2301,10 @@
   },
   {
     "title": "davos",
+    "description": "davos",
     "image": "linuxserver/davos:latest",
     "ports": [
-      "8080:8181/tcp"
+      "8181/tcp"
     ],
     "volumes": [
       "/config",
@@ -2261,20 +2324,20 @@
   },
   {
     "title": "debian",
+    "description": "debian",
     "image": "debian:latest",
-    "ports": [
-      ""
-    ],
+    "ports": [],
     "volumes": [],
     "env": [],
     "note": "<h1>Debian Linux</h1>\n<p>This is a simple Debian Linux container. It is an Interactive container, meaning\nthat the Console UI / CLI will talk directly to the command specified (and\ncan be connected / disconnected repeatedly without killing the container).\nThe command argument also MUST be specified - this is generally /bin/sh or\nsome other useful command in the container.</p>"
   },
   {
     "title": "jenkins",
+    "description": "jenkins",
     "image": "library/jenkins:latest",
     "ports": [
-      "8080:8080/tcp",
-      "5000:5000/tcp"
+      "8080/tcp",
+      "5000/tcp"
     ],
     "volumes": [
       "/var/jenkins_home"
@@ -2333,9 +2396,10 @@
   },
   {
     "title": "couchpotato",
+    "description": "couchpotato",
     "image": "linuxserver/couchpotato:latest",
     "ports": [
-      "5050:5050/tcp"
+      "5050/tcp"
     ],
     "logo": "https://couchpota.to/media/images/full.png",
     "volumes": [
@@ -2362,11 +2426,12 @@
   },
   {
     "title": "crashplan",
+    "description": "crashplan",
     "image": "gfjardim/crashplan:latest",
     "ports": [
-      "4242:4242/tcp",
-      "4243:4243/tcp",
-      "4280:4280/tcp"
+      "4242/tcp",
+      "4243/tcp",
+      "4280/tcp"
     ],
     "volumes": [
       "/config",
@@ -2386,11 +2451,12 @@
   },
   {
     "title": "LEMP",
+    "description": "LEMP",
     "image": "linuxconfig/lemp-php7",
     "ports": [
-      "3306:32772/tcp",
-      "80:32773/tcp",
-      "443:32774/tcp"
+      "32772/tcp",
+      "32773/tcp",
+      "32774/tcp"
     ],
     "volumes": [
       "/var/www/html"

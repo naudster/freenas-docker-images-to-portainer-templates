@@ -33,11 +33,11 @@ for dockerfile in glob.glob('../docker-images/*/Dockerfile', recursive=True):
     app['title'] = app_name
     app['description'] = app_name
     app['image'] = dfp.baseimage
-    app['ports'] = labels.get('org.freenas.port-mappings', '').split(",")
-    for port in app['ports']:
+    app['ports'] = []
+    for port in labels.get('org.freenas.port-mappings', '').split(","):
         # only the container port can be specified, not the host port
         if port:
-            port = port.split(":")[1]
+            app['ports'].append( port.split(":")[1] )
 
     # Some of the readmes specify a logo URL.
     logo = re.search("(?P<url>https?://[^\s]+(png|gif))", readme_text)
